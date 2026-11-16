@@ -12,11 +12,12 @@ const PORT = 3000;
 // "/" é o endereço principal do programa
 //req tem os dados da aquisição
 //res envia a resposta e o send envia e a mensagem de volta
-app.get("/", (req, res) => {
-    res.send("Bem vindo ao Instaclone!");
-});
 
 //
-appp.listen(PORT, () => {
-    console.log(`${PORT}´);
+app.get("/", (req, res) => {
+    res.send("Bem-vindo à minha rede social!");
+});
+//
+app.listen(PORT, () => {
+    console.log(`Servidor funcionando na porta ${PORT}`);
 });
