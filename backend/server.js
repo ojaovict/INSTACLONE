@@ -1,5 +1,5 @@
 //importando o express
-const express = require("express");
+import express from "express";
 
 //variavel app pra gerenciar o servidor e rotas
 const app = express();
