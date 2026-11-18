@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  "seed": "node --experimental-sqlite --disable-warning=ExperimentalWarning seed.js"
+ "scripts": {
+    "seed": "node --experimental-sqlite --disable-warning=ExperimentalWarning seed.js",
+    "consultas": "node --experimental-sqlite --disable-warning=ExperimentalWarning consultas.js"
 },
   "keywords": [],
   "author": "",

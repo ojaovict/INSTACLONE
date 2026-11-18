@@ -1,23 +1,18 @@
-//importando o express
-import express from "express";
+// Importando o Express
+import express from 'express';
 
-//variavel app pra gerenciar o servidor e rotas
+// Criando a aplicação
 const app = express();
 
-// CRIANDO PORTA DO SERVER
+// Definindo a porta
 const PORT = 3000;
 
-//aqui eu criei uma rota onde o app.get 
-// recebe a requisição do HTTP pro GET
-// "/" é o endereço principal do programa
-//req tem os dados da aquisição
-//res envia a resposta e o send envia e a mensagem de volta
-
-//
-app.get("/", (req, res) => {
-    res.send("Bem-vindo à minha rede social!");
+// Criando a rota principal
+app.get('/', (req, res) => {
+    res.send('Olá! Bem-vindo ao Instaclone!');
 });
-//
+
+// Iniciando o servidor
 app.listen(PORT, () => {
     console.log(`Servidor funcionando na porta ${PORT}`);
 });
