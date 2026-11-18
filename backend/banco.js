@@ -1,9 +1,9 @@
 import { DatabaseSync } from 'node:sqlite'
 
-// Abre o arquivo do banco (se ele ainda nao existir, é criado agora)
+// Abre o arquivo do banco
 const banco = new DatabaseSync('banco.db')
 
-//aqui vai criar a  tabela de usuarios 
+// Cria a tabela de usuários
 banco.exec(`
     CREATE TABLE IF NOT EXISTS usuarios (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -15,7 +15,7 @@ banco.exec(`
     );
 `)
 
-// Cria a tabela de publicacoes
+// Cria a tabela de publicações
 banco.exec(`
     CREATE TABLE IF NOT EXISTS posts (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -24,3 +24,6 @@ banco.exec(`
         legenda TEXT NOT NULL DEFAULT ''
     );
 `)
+
+// Exporta a conexão
+export default banco
