@@ -8,3 +8,11 @@ const resultado = banco.prepare(`
 
 // Exibe a quantidade
 console.log(resultado)
+
+const usuario = banco.prepare(`
+    SELECT usuario, senha
+    FROM usuarios
+    WHERE usuario = ?
+`).get('ana');
+
+console.log(usuario);
