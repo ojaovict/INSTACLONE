@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "seed": "node --experimental-sqlite --disable-warning=ExperimentalWarning seed.js",
-    "consultas": "node --experimental-sqlite --disable-warning=ExperimentalWarning consultas.js"
-  },
+  
+"scripts": {
+  "dev": "node --experimental-sqlite --disable-warning=ExperimentalWarning --watch server.js",
+  "start": "node --experimental-sqlite --disable-warning=ExperimentalWarning server.js",
+  "seed": "node --experimental-sqlite --disable-warning=ExperimentalWarning seed.js",
+  "consultas": "node --experimental-sqlite --disable-warning=ExperimentalWarning consultas.js"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
